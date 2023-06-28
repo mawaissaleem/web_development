@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM</title>
+    <style>
+        *{
+            /* overflow:auto; */
+            /* box-sizing: border-box; */
+        }
+        body{
+           background:url("images/med.jpg");
+           padding:0px;
+           margin:0px;
+           color:white;
+        }
+        .container{
+            /* border:2px solid red; */
+            /* background-color: grey; */
+        }
+        #left{
+            display:inline-block;
+            /* width:20px;
+            height: 20px; */
+            position:absolute;
+            top:0px;
+            left:80px;
+            /* border:2px solid red; */
+        }
+        #left img{
+            filter:invert(100%);
+        }
+        #mid{
+            display:block;
+            /* position:absolute; */
+            margin:40px auto;
+            /* margin-top:25px; */
+            width: 40%;
+            text-align: center;
+            /* border:2px solid red; */
+        }
+        #mid ul{
+            /* border:2px solid red; */
+        }
+        #mid li{
+            list-style:none;
+            text-decoration:none;
+            display:inline-block;
+        }
+        #mid ul li a{
+            text-decoration:none;
+            padding:3px 3px;
+            margin:3px 10px;
+            /* overflow:none; */
+            color:white;
+        }
+        #right{
+            display:inline-block;
+            position:absolute;
+            top:40px;
+            right:60px;
+            /* border:2px solid red; */
+        }
+
+        /* form styling */
+        .form{
+            border:1px solid white;
+            border-radius:30px;
+            width:500px;
+            margin:130px 180px;
+            padding:3px 3px;
+
+        }
+        .fdesign{
+            padding:10px 10px;
+            text-align:center;
+        }
+        .fdesign div{
+            margin:3px 3px;
+            padding:3px 3px;
+            
+        }
+        .finput{
+            width:250px;
+            height: 30px;
+        }
+        .blackcolor{
+            color:black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="container">
+        <div class="navbar" id="left">
+            <img src="images/logo.png" alt="" width="100px" height="100px">
+        </div>
+        <div class="navbar" id="mid">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">classes</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+        <div class="navbar" id="right">
+            <input type="text" placeholder="Search">
+        </div>
+    </header>
+    <div class="form">
+        <form class="fdesign">
+            <h2>JOIN NOW</h2>
+            <div><input type="text" placeholder="First Name" class="finput"></div>
+            <div><input type="text" placeholder="Last Name" class="finput"></div>
+            <div><input type="email" placeholder="email" class="finput"></div>
+            <div><input type="password" placeholder="Password" class="finput"></div>
+            <div><input type="number" placeholder="Mobile number" class="finput"></div>
+            <div><input type="number" placeholder="Age" class="finput"></div>
+            <div class="blackcolor">
+                <input type="radio" value="Male" > Male
+                <input type="radio" value="Female" > Female
+            </div>
+            <div><input type="submit" value="Signin" class="finput"></div>
+        </form>
+    </div>
+
+    
+</body>
+</html>

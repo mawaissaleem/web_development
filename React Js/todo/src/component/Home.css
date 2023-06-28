@@ -1,0 +1,126 @@
+
+.home-main-headings{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+.home-main-headings h1,h2{
+    margin-bottom: 40px;
+}
+.todo-side{
+  width: 50%;
+}
+.expense-tracker-side{
+  border-left: 5px solid #BAFF39;
+}
+
+
+.home-main-heading, .expense-tracker-main-heading, .todo-main-heading{
+    text-shadow: 2px 2px 8px red, 0 0 5px #0000FF;
+}
+.home-slogan{
+    text-shadow: 2px 2px 8px #FF0000, 2px 2px 8px #0000FF
+}
+
+
+.home-main-headings h1,
+h2 {
+  width: 100%;
+}
+
+.home-main-headings h1 {
+  animation: right_to_left 3s ease;
+}
+
+.home-main-headings h2 {
+  text-align: right;
+  animation: left_to_right 3s ease;
+}
+
+@keyframes right_to_left {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes left_to_right {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+} 
+
+.homepage-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+
+  background-image: url('./../../public/images/laptop.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.5;
+}
+
+.content-container {
+  text-align: center;
+  z-index: 1;
+  padding-top: 11rem;
+}
+
+.slogan {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+
+.text-white{
+  color: white;
+}
+.text-green{
+  color: #BAFF39;
+}
+.text-red{
+  color: red;
+}
+
+.card {
+  width: 300px;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: white;
+}

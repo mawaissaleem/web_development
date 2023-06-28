@@ -1,0 +1,37 @@
+.income-heading, .expense-heading{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.income-dollars, .expense-dollars{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.income-span, .expense-span{
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.income-span{
+    margin: 0 60px 0 0px;
+}
+.text-white{
+    color: white;
+}
+.text-green{
+    color: #BAFF39;
+}
+.text-red{
+    color: red;
+}
+@media screen and (max-width:550px) {
+    .income-span{
+        margin: 0 40px 0 0;
+    }
+    .income-span, .expense-span{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}

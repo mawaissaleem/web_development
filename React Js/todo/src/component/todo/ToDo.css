@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.item{
+    list-style: none;
+}
+
+.todo-input{
+    width: 400px;
+    height: 35px;
+}
+.todo-submit{
+    background-color: #BAFF39;
+    color: black;
+    width: 100px;
+    height: 35px;
+    margin-left: 40px;
+    border: none;
+}
+.todo-submit:hover{
+    background-color: #434343;
+    color: #BAFF39;
+}
+.unorderedlist{
+    background-color: #BAFF39;
+    width: 550px;
+    margin-top: 20px;
+}
+
+.todo-heading{
+    margin-bottom: 30px;
+    color: white;
+}
+.todo-input-help-txt{
+    visibility: hidden;
+    width: 180px;
+    
+    background-color: rgba(0,0,0,0.9);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    margin-left: 420px;
+   
+    /* Position the tooltip text  */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .todo-input-icon:hover + .todo-input-help-txt {
+    visibility: visible;
+  }
+@media (max-width: 600px) {
+    /* styles for devices with a screen width greater than or equal to 720px */
+    .unorderedlist{
+       
+        width: 350px;
+        
+    }
+    .todo-input{
+        width: 250px;
+        height: 35px;
+    }
+    .todo-submit{
+        
+        width: 80px;
+        
+        margin-left: 10px;
+        
+    }
+  }
+
+  @media (max-width: 400px) {
+    /* styles for devices with a screen width greater than or equal to 720px */
+    .unorderedlist{
+       
+        width: 230px;
+        
+    }
+    .todo-input{
+        width: 150px;
+        height: 35px;
+    }
+    .todo-submit{
+        
+        width: 70px;
+        
+        margin-left: 5px;
+        
+    }
+  }

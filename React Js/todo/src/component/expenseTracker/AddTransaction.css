@@ -1,0 +1,148 @@
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  display: block;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.dropdown-content li:hover {
+  color: black;
+  background-color: #BAFF39;
+}
+
+.add-trans-input {
+  width: 275px;
+  height: 35px;
+  margin: 10px 0;
+  border: none;
+  background-color: white;
+  color: black;
+  padding-left: 10px;
+
+}
+
+.add-amount-input {
+  width: 275px;
+  height: 35px;
+  margin: 10px 0;
+  border: none;
+  background-color: white;
+  color: black;
+  padding-left: 10px;
+}
+
+.dropdown-btn {
+  width: 180px;
+  height: 35px;
+  border: none;
+  background-color: white;
+  color: black;
+  border-left: 1px solid black;
+}
+
+.add-trans-submit-btn {
+  width: 475px;
+  height: 35px;
+  margin: 5px 0px;
+  background-color: #BAFF39;
+  color: black;
+}
+
+.add-trans-submit-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-green {
+  color: #BAFF39;
+}
+
+.text-red {
+  color: red;
+}
+
+.info-btn {
+  color: rgb(174, 167, 167);
+}
+
+
+
+
+/* Tooltip text */
+.trns-amnt-help-txt,
+.inex-help-txt,
+.amnt-help-txt {
+  visibility: hidden;
+  width: 180px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.trns-amnt-icon:hover+.trns-amnt-help-txt {
+  visibility: visible;
+}
+
+.inex-icon:hover+.inex-help-txt {
+  visibility: visible;
+}
+
+.amnt-icon:hover+.amnt-help-txt {
+  visibility: visible;
+}
+
+
+
+@media screen and (max-width:550px) {
+
+  .dropdown-btn {
+    width: 150px;
+    height: 35px;
+    border: none;
+  }
+
+  .add-trans-input {
+    width: 150px;
+    height: 35px;
+    margin: 10px 0;
+    border: none;
+  }
+
+  .add-trans-submit-btn {
+    width: 300px;
+    height: 35px;
+    margin: 5px 0px;
+  }
+
+  .add-amount-input {
+    width: 150px;
+  }
+}

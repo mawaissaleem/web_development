@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        /* ----------CSS RESET-------- */
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        /* ----------UTILITIES-------- */
+        .heading {
+            font-family: 'Libre Baskerville', serif;
+            font-size:1.5rem;
+        }
+
+        .normal {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        /* ----------navigation menu-------- */
+        #navigation_bar{
+            position:relative;
+            top:0px;
+        }
+        #navigation_bar::before{
+            content:"";
+            background-color:gray;
+            z-index:-1;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top:0px;
+            left:0px;
+            opacity: 0.5;
+        }
+        #navbar {
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            /* background-color: gray; */
+        }
+
+        .navbar_items {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar_items li {
+            list-style: none;
+            margin: 0px 3px;
+            padding: 5px 5px;
+        }
+
+        .navbar_items li a {
+            text-decoration: none;
+            color: white;
+            margin: 0px 5px;
+            padding: 5px 5px;
+        }
+        .navbar_items li a:hover {
+           background-color:#afd5d6;
+           border-radius: 10px;
+           border:1px solid black;
+           color:black;
+        }
+
+        #signin_btn {
+            margin: 0px 30px 0px 30px;
+            width: 110px;
+            height: 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color:#adadcc;
+            border:none;
+            font-size:18px;
+        }
+        #signin_btn:hover {
+            background-color:#4a4aab;
+        }
+
+        #search_bar {
+            margin: 0px 30px 0px 50px;
+            width: 160px;
+            height: 30px;
+            border-radius: 20px;
+            border:none;
+            
+        }
+        #search_bar:focus {
+           background-color:darkgreen;
+           border:none;
+        }
+
+        #navbar_heading {
+            margin:0px 30px;
+            padding:0px 10px;
+        }
+        /* --------------Home-------------- */
+        /* #home_section::before{
+            content:"";
+            background:url("images/home_bg2.png") ;
+            height: 500px;
+            width:100%;
+            position:absolute;
+            top:68px;
+            left:0px;
+             z-index:-2; COMMENT THIS
+        } */
+        /* #home_section{
+            height: 500px;
+             border:1px solid red; 
+            background-color: rgb(200, 219, 219);
+             opacity: 0.1; COMMENT THIS
+            z-index:-1;
+        } */
+        /* #home{
+            
+            height: 400px;
+            
+            
+        } */
+
+
+        #home{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            background-color:#cbdada;
+        }
+        #home img{
+            height: 550px;
+            margin:0px 100px;
+            padding:0px 10px;
+        }
+        #home_slogan{
+            margin:10px 100px;
+            padding:10px 10px;
+        }
+        #home_heading{
+            font-size:4rem;
+            margin:0px;
+        }
+        #home_discount{
+            font-size:2rem;
+            color:darkblue;
+            font-family: 'Lobster', cursive;
+        }
+        #home_best_clothes{
+            font-size:1.5rem;
+            margin:0px;
+        }
+        #shop_now_btn {
+            margin: 25px 0px;
+            width: 110px;
+            height: 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color:#adadcc;
+            border:none;
+            font-size:18px;
+        }
+        #shop_now_btn:hover {
+            background-color:#4a4aab;
+        }
+        /*------catagory section---------*/
+        #catagory_section{
+            /* border:1px solid blue; */
+            margin:20px 0px;
+            padding:10px 0px;
+        }
+        .catagory{
+            display:flex;
+            align-items:center;
+            flex-direction:column;
+        }
+        .catagory_boxes{
+            display:flex;
+            /* align-items: center; */
+        }
+        .catagory_box_styling{
+            border:1px solid #6dabaa;
+            margin:3px 3px;
+            padding:3px 3px;
+            height: 300px;
+            width:400px;
+            background-color: #f1f1f1;
+        }
+        .catagory_heading{
+            margin:0px 0px;
+        }
+        .catagory img{
+            width:320px;
+        }
+        .box_writing{
+            margin:30px 0px 0px 15px;
+            
+        }
+        #men_img{
+            width:204px;
+            margin:0px 0px 0px 50px;
+        }
+        #women_img{
+            width:284px;
+            margin:0px 0px 0px 0px;
+        }
+        #accessories_img{
+            width:240px;
+            height:200px;
+            margin:64px 0px 0px 0px;
+        }
+        #catagory_main_heading{
+            font-size:3rem;
+        }
+        /*-------Product Section--*/
+        #product_section li{
+            list-style: none;
+        }
+        
+        #product_heading_bar{
+            display:flex;
+            /* border:1px solid red; */
+        }
+        #product_heading_bar h1{
+            font-size:2rem;
+            margin:50px 200px 0px 50px;
+            padding:0px 3px;
+        }
+        #product_heading_bar_item{
+            display:flex;
+            align-items: flex-end;
+            margin:0px 0px 0px 500px;
+            padding:0px 0px 0px 50px;
+        }
+        #product_heading_bar_item a{
+            text-decoration:none;
+            margin:0px 10px;
+            padding:0px 10px;
+            color:black;
+        }
+        #product_items{
+            /* border: 1px solid red; */
+            display:flex;
+            align-items:center;
+            /* justify-content: center; */
+            flex-wrap:wrap;
+
+        }
+        .product_item_box{
+            margin:50px 35px;
+            margin-bottom:0px;
+            padding:3px 3px;
+            
+        }
+        .product_item_box img{
+            border:1px solid #92989e;
+            width:250px;
+            height: 300px;
+            background-color:#d1d3d6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-------------------------navigation menu-------------------->
+    <section id="navigation_bar">
+        <nav id="navbar">
+            <h2 class="heading" id="navbar_heading">Eshop</h2>
+            <ul class="navbar_items normal">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Catagory</a></li>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <input type="search" placeholder="Search products" class="normal" id="search_bar">
+            <ul class="navbar_items normal">
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+            <button class="normal" id="signin_btn">Sign In</button>
+        </nav>
+    </section>
+    <!---------------------Home---------------------->
+    <section id="home_section">
+        <div id="home">
+            
+            <div id="home_slogan">
+                <p class="normal" id="home_discount">50% Discount</p>
+                <h1 class="heading" id="home_heading">New Arrival</h1>
+                <p class="normal" id="home_best_clothes">Men's and Womens clothes</p>
+                <p class="normal" id="home_best_clothes">Best clothes of 2021</p>
+                
+                <button class="normal" id="shop_now_btn">Shop Now</button>
+            </div>
+            <img src="images/home_bg.png">
+        </div>
+    </section>
+
+    <!-----------------Catagory Section--------------------------->
+    <section id="catagory_section">
+        <div class="catagory">
+            <h1 class="heading" id="catagory_main_heading">Shop by Catagory</h1>
+            <div class="catagory_boxes">
+                <div class="catagory_box_styling catagory_boxes">
+                    <div class="catagory box_writing">
+                        <h2 class="heading catagory_heading">Women</h2>
+                        <p class="normal">Spring 2021</p>
+                    </div>
+                    <img src="images/women_catagory.png" id="women_img">
+                </div>
+                <div class="catagory_box_styling catagory_boxes">
+                    <div class="catagory box_writing">
+                        <h2 class="heading catagory_heading">Men</h2>
+                        <p class="normal">Spring 2021</p>
+                    </div>
+                    <img src="images/men_catagory.png" id="men_img">
+                </div>
+                <div class="catagory_box_styling catagory_boxes">
+                    <div class="catagory box_writing">
+                        <h2 class="heading catagory_heading">Accessories</h2>
+                        <p class="normal">New Trend</p>
+                    </div>
+                    <img src="images/accessories.png" id="accessories_img">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!----------------------------Product Section--------------------------------->
+    <section id="product_section">
+        <div id="product_heading_bar">
+            <h1 class="heading">Latest Products</h1>
+            <ul id="product_heading_bar_item">
+                <li><a href="#" class="normal">All</a></li>
+                <li><a href="#" class="normal">New</a></li>
+                <li><a href="#" class="normal">Featured</a></li>
+            </ul>
+        </div>
+        <div id="product_items">
+            <div class="product_item_box">
+                <img src="latest_img/1.png" id="product_item_img1">
+                <p>$450</p>
+            </div>
+            <div class="product_item_box" id="product_item_img2">
+                <img src="latest_img/11.png">
+                <p>$450</p>
+            </div>
+            <div class="product_item_box" id="product_item_img2">
+                <img src="latest_img/16.png">
+                <p>$450</p>
+            </div>
+            <div class="product_item_box" id="product_item_img2">
+                <img src="latest_img/7.png">
+                <p>$450</p>
+            </div>
+            <div class="product_item_box" id="product_item_img2">
+                <img src="latest_img/13.png">
+                <p>$450</p>
+            </div>
+            <div class="product_item_box" id="product_item_img2">
+                <img src="latest_img/2.png">
+                <p>$450</p>
+            </div>
+            <div class="product_item_box" id="product_item_img2">
+                <img src="latest_img/4.png">
+                <p>$450</p>
+            </div>
+            <div class="product_item_box" id="product_item_img2">
+                <img src="latest_img/10.png">
+                <p>$450</p>
+            </div>
+            <div class="product_item_box" id="product_item_img2">
+                <img src="latest_img/5.png">
+                <p>$450</p>
+            </div>
+            
+            
+            <div class="product_item_box" id="product_item_img2">
+                <img src="latest_img/8.png">
+                <p>$450</p>
+            </div>
+            <div class="product_item_box" id="product_item_img2">
+                <img src="latest_img/14.png">
+                <p>$450</p>
+            </div>
+            
+            
+            <div class="product_item_box" id="product_item_img2">
+                <img src="latest_img/12.png">
+                <p>$450</p>
+            </div>
+            
+            
+            
+        </div>
+        
+    </section>
+</body>
+
+</html>

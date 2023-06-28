@@ -1,0 +1,12 @@
+.main-expense-section{
+    
+    width: 550px;
+    
+}
+
+@media screen and (max-width:550px) {
+    .main-expense-section{
+        
+        width: 350px;
+    }
+}

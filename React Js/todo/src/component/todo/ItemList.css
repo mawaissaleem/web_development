@@ -1,0 +1,21 @@
+
+
+.fa-trash{
+    margin-right: 20px;
+    padding: 6px;
+    color: black;
+    border: 2px solid #BAFF39;
+    border-radius: 50%;
+}
+.fa-trash:hover{
+    color: #BAFF39;
+    background-color: #434343;
+}
+.item{
+    background-color: #BAFF39;
+    margin: 10px 0;
+    height: 30px;
+}
+.itemcontainer{
+    border-bottom: 3px solid #434343;
+}

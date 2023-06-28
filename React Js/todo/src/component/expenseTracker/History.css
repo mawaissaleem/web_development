@@ -1,0 +1,29 @@
+.history-trans{
+    
+    width: 300px;
+}
+p{
+    margin: 0;
+}
+.history-trans-amount{
+    width: 130px;
+}
+.text-white{
+    color: white;
+}
+.text-green{
+    color: #BAFF39;
+}
+.text-red{
+    color: red;
+}
+.history-strip{
+    background-color: #BAFF39;
+    margin-bottom: 10px;
+}
+.his-border-green{
+    border-right: 2px solid #BAFF39;
+}
+.his-border-red{
+    border-right: 2px solid red;
+}

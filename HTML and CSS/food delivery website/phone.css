@@ -1,0 +1,32 @@
+#navigation{
+    flex-direction: column;
+    
+}
+#service{
+    flex-direction:column;
+}
+#client{
+    overflow:hidden;
+}
+#client-section{
+    overflow:hidden;
+}
+#contact-section{
+    overflow:hidden;
+}
+#contact{
+    overflow:hidden;
+}
+#home {
+    margin: 1rem 1rem;
+    padding: 1rem 1rem;
+    
+    
+}
+#home h2 {
+    
+    font-size: 1.5rem;
+   
+    
+
+}
